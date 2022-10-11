@@ -39,8 +39,8 @@ function showInfo(json){
   
   document.querySelector('.titulo').innerHTML = `${json.name} - ${json.country}`;
   document.querySelector('.tempInfo').innerHTML = `${json.temp.toFixed()}<sup>ºC</sup>`;
-  document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed.toFixed(1)}<spam>km/h</spam>`;
-  document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
+  document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed.toFixed(1)*3.6}<spam>km/h</spam>`;
+  document.querySelector('.sunset img').setAttribute('src', `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
   document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle-90}deg)`;
 
   document.querySelector('.resultado').style.display = 'block';

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <h1>Clima</h1>
+    <h1>Clima do Mundo</h1>
 
     <form class="busca">
         <input type="search" id="searchInput" />
@@ -16,20 +16,39 @@
     </form>
 
     <div class="resultado">
-        <div class="titulo">--</div>
+        <div class="generalInfo">
+            <!-- <img src="http://openweathermap.org/img/wn/10d@2x.png" /> -->
+            <div class="titulo">Teste--</div>
+            <div class="tempInfo">25 <sup>ºC</sup></div>
+            <div class="tempDescription">Teste</div>
+            <div class="max--min">
+                <div class="tempMax">31</div>
+                <div class="tempMin">22</div>
+            </div>
+        </div>
 
         <div class="info">
-            <div class="temp">
-                <div class="tempTitulo">Temperatura</div>
-                <div class="tempInfo">-- <sup>ºC</sup></div>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+            <div class="sunset">
+                <div class="sunsetTitulo">Por do sol</div>
+                <div class="sunsetInfo">-- </div>
             </div>
+
             <div class="vento">
                 <div class="ventoTitulo">Vento</div>
-                <div class="ventoInfo">-- <span>km/h</span></div>
+                <div class="ventoInfo">22 <span>km/h</span></div>
                 <div class="ventoArea">
                     <div class="ventoPonto" style="transform: rotate(0deg)"></div>
                 </div>
+            </div>
+
+            <div class="fellsLike">
+                <div class="fellsLikeTitulo">Sensação</div>
+                <div class="fellsLikeInfo">-- <sup>ºC</sup></div>
+            </div>
+
+            <div class="humidity">
+                <div class="humidityTitulo">Humidade</div>
+                <div class="humidityInfo">-- <span>%</span></div>
             </div>
         </div>
     </div>

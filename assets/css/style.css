@@ -10,13 +10,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #333;
+    background-color: #87Ceeb;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     color: #FFF;
     margin: 20px 0;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
 }
 
 .busca {
@@ -35,23 +36,33 @@ h1 {
     padding: 10px;
     font-size: 15px;
     border: 0;
-    background-color: #555;
+    background-color: rgb(61, 171, 214);
     color: #FFF;
     border-radius: 5px;
     margin-left: 10px;
     cursor: pointer;
 }
 .busca button:hover {
-    background-color: #444;
+    background-color: #21a3d6;
 }
 
 .resultado {
     width: 300px;
-    display: none;
+    padding: 15px;
+    display: block;
     border: 1px dotted #FFF;
     margin-top: 20px;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(61, 171, 214, 0.7);
+}
+
+.generalInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(61, 171, 214, 0.7);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .titulo {
@@ -60,54 +71,103 @@ h1 {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 10px;
 }
 
-.info {
-    display: flex;
-    width: 100%;
-}
-.info .temp {
-    flex: 1;
-    text-align: center;
-}
-.info .vento {
-    flex: 1;
-    text-align: center;
-}
-.tempTitulo,
-.ventoTitulo {
-    color: #777;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-.tempInfo,
-.ventoInfo {
+.tempInfo, .sunsetInfo, .ventoInfo, .fellsLikeInfo, .humidityInfo {
     color: #FFF;
     font-size: 30px;
     font-weight: bold;
+} 
+
+.sunsetInfo, .fellsLikeInfo, .humidityInfo{
+    margin: auto;
+    margin-top: 25px;
 }
-.tempInfo sup {
+
+.tempDescription{
+    margin-top:10px;
+    font-size: 15px;
+    color: #FFF;
+}
+.max--min{
+    display: flex;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #FFF;
+}
+.tempMax{
+    margin-right: 15px ;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sunset, .vento, .fellsLike, .humidity{
+    height: 120px;
+    background-color: rgba(61, 171, 214, 0.7);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.sunsetTitulo, .ventoTitulo, .fellsLikeTitulo, .humidityTitulo{
+    color: #FFF;
+    font-size: 15px;
+    text-align: left;
+}
+
+.tempInfo sup, .fellsLikeInfo sup {
     font-size: 15px;
     font-weight: normal;
 }
-.ventoInfo span {
+
+.humidity span {
     font-size: 15px;
     font-weight: normal;
 }
-.ventoArea {
+
+.vento{
+    position: relative;
+}
+
+.ventoInfo{
     width: 50px;
     height: 50px;
+    position: absolute;
+    left: 40px;
+    top: 42px;
+    font-size: 15px;
+    padding-top: 15px;
+    border-radius: 50%;
+    background-color: #FFF;
+    color: #666;
+    z-index: 99;
+}
+
+.ventoInfo span{
+    font-size: 10px;
+    
+}
+
+.ventoArea {
+    width: 90px;
+    height: 90px;
     border: 1px solid #FFF;
     border-radius: 50%;
     margin: auto;
-    margin-top: 20px;
-    padding-left: 25px;
-    padding-top: 25px;
+    padding-left: 45px;
+    padding-top: 45px;
 }
+
 .ventoPonto {
-    width: 15px;
-    height: 1px;
+    width: 40px;
+    height: 2px;
     background-color: #FFF;
     transform-origin: left;
 }
@@ -121,4 +181,5 @@ footer {
     margin-top: 20px;
     color: #FFF;
     font-size: 13px;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
 }
