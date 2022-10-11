@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <h1>Clima do Mundo</h1>
+    <h1>Tempo</h1>
 
     <form class="busca">
-        <input type="search" id="searchInput" />
+        <input type="search" id="searchInput" placeholder="Insira a cidade"/>
         <button>Buscar</button>
     </form>
 
     <div class="resultado">
+        <div class="image">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+        </div>
         <div class="generalInfo">
-            <!-- <img src="http://openweathermap.org/img/wn/10d@2x.png" /> -->
-            <div class="titulo">Teste--</div>
-            <div class="tempInfo">25 <sup>ºC</sup></div>
-            <div class="tempDescription">Teste</div>
+            <div class="titulo">--</div>
+            <div class="tempInfo">-- <sup>ºC</sup></div>
+            <div class="tempDescription">--</div>
             <div class="max--min">
-                <div class="tempMax">31</div>
-                <div class="tempMin">22</div>
+                <div class="tempMax">Max:--<sup>ºC</sup></div>
+                <div class="tempMin">Min:--<sup>ºC</sup></div>
             </div>
         </div>
 
@@ -35,7 +37,7 @@
 
             <div class="vento">
                 <div class="ventoTitulo">Vento</div>
-                <div class="ventoInfo">22 <span>km/h</span></div>
+                <div class="ventoInfo">-- <span>km/h</span></div>
                 <div class="ventoArea">
                     <div class="ventoPonto" style="transform: rotate(0deg)"></div>
                 </div>
@@ -47,7 +49,7 @@
             </div>
 
             <div class="humidity">
-                <div class="humidityTitulo">Humidade</div>
+                <div class="humidityTitulo">Umidade</div>
                 <div class="humidityInfo">-- <span>%</span></div>
             </div>
         </div>
